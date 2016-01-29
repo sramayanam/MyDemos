@@ -1,0 +1,14 @@
+{
+  "name": "HDInsightLinkedService",
+  "properties": {
+    "description": "HDInsight Cluster",
+    "type": "HDInsight",
+    "typeProperties": {
+      "clusterUri": "https://DemoHDInsight.azurehdinsight.net",
+      "userName": "adminsrram",
+      "password": "**********",
+      "linkedServiceName": "HDInsightStorageLinkedService"
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-08-01/Microsoft.DataFactory.LinkedService.json"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "AzureSqlLinkedServiceoutput",
+  "properties": {
+    "description": "",
+    "type": "AzureSqlDatabase",
+    "typeProperties": {
+      "connectionString": "Data Source=tcp:srramsql.database.windows.net,1433;Initial Catalog=DWR;Integrated Security=False;User ID=srramadmin@srramsql;Password=**********;Connect Timeout=30;Encrypt=True"
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-08-01/Microsoft.DataFactory.LinkedService.json"
+}

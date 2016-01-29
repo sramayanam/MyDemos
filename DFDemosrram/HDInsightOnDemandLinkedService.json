@@ -1,0 +1,24 @@
+{
+  "name": "HDInsightOnDemandLinkedService",
+  "properties": {
+    "description": "Run HQL Transform",
+    "type": "HDInsightOnDemand",
+    "typeProperties": {
+      "version": null,
+      "clusterSize": 1,
+      "timeToLive": "01:00:00",
+      "coreConfiguration": {},
+      "hBaseConfiguration": {},
+      "hdfsConfiguration": {},
+      "hiveConfiguration": {},
+      "mapReduceConfiguration": {},
+      "oozieConfiguration": {},
+      "sparkConfiguration": {},
+      "stormConfiguration": {},
+      "yarnConfiguration": {},
+      "additionalLinkedServiceNames": [],
+      "linkedServiceName": "HDInsightStorageLinkedService"
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-08-01/Microsoft.DataFactory.LinkedService.json"
+}

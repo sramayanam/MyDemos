@@ -1,0 +1,50 @@
+{
+  "name": "Stocks-SQLTable",
+  "properties": {
+    "structure": [
+      {
+        "name": "Ticker",
+        "type": "String"
+      },
+      {
+        "name": "Name",
+        "type": "String"
+      },
+      {
+        "name": "Calendardate",
+        "type": "String"
+      },
+      {
+        "name": "Close",
+        "type": "Decimal"
+      },
+      {
+        "name": "Volume",
+        "type": "Decimal"
+      },
+      {
+        "name": "Open",
+        "type": "Decimal"
+      },
+      {
+        "name": "High",
+        "type": "Decimal"
+      },
+      {
+        "name": "Low",
+        "type": "Decimal"
+      }
+    ],
+    "published": false,
+    "type": "AzureSqlTable",
+    "linkedServiceName": "AzureSqlLinkedServiceoutput",
+    "typeProperties": {
+      "tableName": "Stocks"
+    },
+    "availability": {
+      "frequency": "Month",
+      "interval": 1
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-08-01/Microsoft.DataFactory.Table.json"
+}

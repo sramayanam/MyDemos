@@ -1,0 +1,53 @@
+{
+  "name": "stocks-input",
+  "properties": {
+    "structure": [
+      {
+        "name": "Calendardate",
+        "type": "String"
+      },
+      {
+        "name": "Close",
+        "type": "Decimal"
+      },
+      {
+        "name": "Volume",
+        "type": "Decimal"
+      },
+      {
+        "name": "Open",
+        "type": "Decimal"
+      },
+      {
+        "name": "High",
+        "type": "Decimal"
+      },
+      {
+        "name": "Low",
+        "type": "Decimal"
+      },
+      {
+        "name": "Ticker",
+        "type": "String"
+      }
+    ],
+    "published": false,
+    "type": "AzureBlob",
+    "linkedServiceName": "StorageLinkedServiceinput",
+    "typeProperties": {
+      "folderPath": "stocks/",
+      "format": {
+        "type": "TextFormat",
+        "rowDelimiter": "\n",
+        "columnDelimiter": ","
+      }
+    },
+    "availability": {
+      "frequency": "Month",
+      "interval": 1
+    },
+    "external": true,
+    "policy": {}
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-08-01/Microsoft.DataFactory.Table.json"
+}

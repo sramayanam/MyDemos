@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>fe7580e8-df0b-42a2-b75b-84a8be1864b8</ProjectGuid>
+    <OutputType>File</OutputType>
+    <AssemblyName>DataFactory</AssemblyName>
+    <ApiVersion>2015-08-01</ApiVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Name>DFDemosrram</Name>
+    <RootNamespace>DFDemosrram</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ADFConfigFileToPublish>
+    </ADFConfigFileToPublish>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Dependencies\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Script Include="AzureSqlLinkedServiceoutput.json" />
+    <Script Include="HDInsightLinkedService.json" />
+    <Script Include="HDInsightOnDemandLinkedService.json" />
+    <Script Include="HDInsightStorageLinkedService.json" />
+    <Script Include="ref-data.json" />
+    <Script Include="stocks-enriched.json" />
+    <Script Include="Stocks-Final.json" />
+    <Script Include="stocks-input.json" />
+    <Script Include="stocks-partitioned.json" />
+    <Script Include="Stocks-SQLTable.json" />
+    <Script Include="StocksPLine.json" />
+    <Script Include="StorageLinkedServiceinput.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dependencies\partition.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dependencies\transform.hql">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(AppData)\Microsoft\DataFactory Tools for Visual Studio\MsBuild\1.0\DataFactory.targets" />
+</Project>
